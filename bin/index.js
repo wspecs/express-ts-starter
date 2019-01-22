@@ -77,7 +77,10 @@ const GENERATE_MODULE_QUESTIONS = [
   }
 ];
 
-program.command('start').action(async () => generateModule());
+program
+  .command('start')
+  .description('Generate express application')
+  .action(async () => generateModule());
 
 async function generateModule() {
   const response = await prompts(GENERATE_MODULE_QUESTIONS);

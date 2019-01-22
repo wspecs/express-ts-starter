@@ -3,6 +3,7 @@
 
 
 ![npm](https://img.shields.io/npm/v/express-ts-starter.svg) ![license](https://img.shields.io/npm/l/express-ts-starter.svg) ![github-issues](https://img.shields.io/github/issues/wspecs/express-ts-starter.svg)
+
 ![nodei.co](https://nodei.co/npm/express-ts-starter.png?downloads=true&downloadRank=true&stars=true)
 
 ![travis-status](https://img.shields.io/travis/wspecs/express-ts-starter.svg)
@@ -19,6 +20,17 @@
 - 
 
 ## Usage
+```bash
+Usage: express-ts-starter [options] [command]
+
+Options:
+  -h, --help  output usage information
+
+Commands:
+  start       Generate express application
+```
+
+## Sample
 
 ```typescript
 // lib/routes/landing.ts
