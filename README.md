@@ -91,7 +91,7 @@ Package | Version | Dev
 [args-finder](https://www.npmjs.com/package/args-finder) | 0.0.3 | ✖
 [commander](https://www.npmjs.com/package/commander) | ^2.19.0 | ✖
 [dot-object](https://www.npmjs.com/package/dot-object) | ^1.7.1 | ✖
-[express-starter-config](https://www.npmjs.com/package/express-starter-config) | ^0.2.0 | ✖
+[express-starter-config](https://www.npmjs.com/package/express-starter-config) | ^0.2.1 | ✖
 [great-logs](https://www.npmjs.com/package/great-logs) | 0.0.4 | ✖
 [prompts](https://www.npmjs.com/package/prompts) | ^2.0.1 | ✖
 [shelljs](https://www.npmjs.com/package/shelljs) | ^0.8.3 | ✖
