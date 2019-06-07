@@ -101,16 +101,27 @@ async function generateModule() {
     if (key.startsWith('_')) delete packageInfo[key];
   }
   const packageInfoText = JSON.stringify(packageInfo, null, 2).replace(
-    /exoress-ts-starter/g,
+    /express-ts-starter/g,
     response.name
   );
   fs.writeFileSync(`${folderName}/package.json`, packageInfoText, 'utf8');
+
+  replaceName(`${folderName}/wspecs.yml`, `${folderName}/package.json`);
   log.info('run the following command to continue');
   console.log('******************************');
   console.log(`cd ${folderName}`);
   console.log('npm i');
   console.log('npm run readme');
   console.log('******************************');
+}
+
+function replaceName(path, packagePath) {
+  const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+  const text = fs
+    .readFileSync(path, 'utf8')
+    .replace(/wspecs\/express-ts-starter/g, pkg.repository)
+    .replace(/express-ts-starter/g, pkg.name);
+  fs.writeFileSync(path, text, 'utf8');
 }
 
 function copyFiles(folderName) {
