@@ -1,7 +1,7 @@
 name: express-ts-starter
 git: https://github.com/wspecs/express-ts-starter.git
 docker: wspecs/express-ts-starter
-domain: express-ts-starter.wendly.com
+domain: express-ts-starter.com
 port: 1234
 buckets:
   - sfo-app-staging
