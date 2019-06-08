@@ -119,7 +119,6 @@ function replaceName(path, packagePath) {
   const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
   const text = fs
     .readFileSync(path, 'utf8')
-    .replace(/wspecs\/express-ts-starter/g, pkg.repository)
     .replace(/express-ts-starter/g, pkg.name);
   fs.writeFileSync(path, text, 'utf8');
 }
