@@ -6,7 +6,6 @@ class ApplicationServer extends express_starter_config_1.BaseApplicationServer {
     constructor() {
         super();
         this.addControllers(landing_1.LandingController);
-        this.app.get('/hello', (req, res) => res.send('Hello'));
     }
 }
 // Start the application
