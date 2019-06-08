@@ -8,10 +8,27 @@
   "scripts": {
     "readme": "node ./node_modules/.bin/node-readme",
     "build:minify": "node dist/lib/minify.js --css --js --debug",
+    "build:typescript": "tsc",
     "build": "rm -rf dist && tsc && npm run readme",
     "prod": "npm run build && node dist/index.js --instance prod",
-    "dev": "npm run build && node dist/index.js --instance dev --debug",
-    "test": "mocha ./dist/test/*.js"
+    "dev": "npm run build:typescript && node dist/index.js --instance dev --debug",
+    "test": "mocha ./dist/test/*.js",
+    "watch": "nodemon",
+    "start": "node dist/index.js --instance prod"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*test.ts",
+      "**/*spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "lib",
+      "index.ts"
+    ],
+    "exec": "npm run dev",
+    "ext": "ts"
   },
   "bin": {
     "express-ts-starter": "bin/index.js"
@@ -42,6 +59,7 @@
     "dot-object": "^1.7.1",
     "express-starter-config": "^0.4.1",
     "great-logs": "0.0.4",
+    "nodemon": "^1.19.1",
     "prompts": "^2.0.1",
     "shelljs": "^0.8.3",
     "walkdir": "0.0.12"

@@ -5,6 +5,8 @@ class ApplicationServer extends BaseApplicationServer {
   constructor() {
     super();
     this.addControllers(LandingController);
+
+    this.app.get('/hello', (req: any, res: any) => res.send('Hello'));
   }
 }
 
